@@ -1,24 +1,24 @@
-import UserCard from "@/components/cards/UserCard";
-import Filter from "@/components/shared/Filter/Filter";
-import Pagination from "@/components/shared/Pagination/Pagination";
-import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
-import { UserFilters } from "@/constants/filters";
-import { getAllUsers } from "@/lib/actions/user.action";
-import { SearchParamsProps } from "@/types";
-import Link from "next/link";
+import UserCard from '@/components/cards/UserCard';
+import Filter from '@/components/shared/Filter/Filter';
+import Pagination from '@/components/shared/Pagination/Pagination';
+import LocalSearchBar from '@/components/shared/search/LocalSearchBar';
+import { UserFilters } from '@/constants/filters';
+import { getAllUsers } from '@/lib/actions/user.action';
+import { SearchParamsProps } from '@/types';
+import Link from 'next/link';
 
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Community| Dev Sphere",
-  description: "Community page of Dev Sphere",
+  title: 'Community| Dev Overflow',
+  description: 'Community page of Dev Overflow'
 };
 
 const Community = async ({ searchParams }: SearchParamsProps) => {
   const { users, isNext } = await getAllUsers({
     searchQuery: searchParams?.q,
     filter: searchParams?.filter,
-    page: searchParams?.page ? +searchParams?.page : 1,
+    page: searchParams?.page ? +searchParams?.page : 1
   });
 
   const pageNumber = searchParams?.page ? +searchParams?.page : 1;
