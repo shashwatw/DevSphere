@@ -1,18 +1,18 @@
-import LocalSearchBar from '@/components/shared/search/LocalSearchBar';
-import { QuestionFilters } from '@/constants/filters';
-import Filter from '@/components/shared/Filter/Filter';
-import NoResult from '@/components/shared/NoResult/NoResult';
-import QuestionCard from '@/components/cards/QuestionCard';
-import { getSavedQuestions } from '@/lib/actions/user.action';
-import { auth } from '@clerk/nextjs';
-import { SearchParamsProps } from '@/types';
-import Pagination from '@/components/shared/Pagination/Pagination';
+import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
+import { QuestionFilters } from "@/constants/filters";
+import Filter from "@/components/shared/Filter/Filter";
+import NoResult from "@/components/shared/NoResult/NoResult";
+import QuestionCard from "@/components/cards/QuestionCard";
+import { getSavedQuestions } from "@/lib/actions/user.action";
+import { auth } from "@clerk/nextjs";
+import { SearchParamsProps } from "@/types";
+import Pagination from "@/components/shared/Pagination/Pagination";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Collections | Dev Overflow',
-  description: 'Collections page of Dev Overflow'
+  title: "Collections | DevSphere",
+  description: "Collections page of Dev Sphere",
 };
 
 export default async function Collection({ searchParams }: SearchParamsProps) {
@@ -22,7 +22,7 @@ export default async function Collection({ searchParams }: SearchParamsProps) {
     clerkId: userId,
     searchQuery: searchParams?.q,
     filter: searchParams?.filter,
-    page: searchParams?.page ? +searchParams?.page : 1
+    page: searchParams?.page ? +searchParams?.page : 1,
   });
 
   const pageNumber = searchParams?.page ? +searchParams?.page : 1;
