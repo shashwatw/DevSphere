@@ -1,12 +1,5 @@
 # Dev Sphere - Q&A website for developers
 
-<!-- [![Latest release](https://img.shields.io/github/v/release/shashwatw/dev-overflow?label=Latest%20release&style=social)](https://dev-sphere-pi.vercel.app/)
-[![GitHub commits](https://img.shields.io/github/commits-since/shashwatw/dev-overflow/v1.5.0.svg?style=social)](https://dev-sphere-pi.vercel.app/) -->
-
-[![Stars](https://img.shields.io/github/stars/shashwatw/dev-overflow?style=social)](https://dev-sphere-pi.vercel.app/)
-[![Fork](https://img.shields.io/github/forks/shashwatw/dev-overflow?style=social)](https://dev-sphere-pi.vercel.app/)
-
-![demo](https://cdn.discordapp.com/attachments/571883066017185802/1165414835811536976/Screenshot_2023-10-21_at_3.22.16_PM.png?ex=6546c425&is=65344f25&hm=21fd71517505f6b787fc611afd5c210c3d7436868af1975b656c00558fd288b3&)
 
 ![contributions](https://img.shields.io/badge/all_contributors-1-orange.svg)
 ![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
