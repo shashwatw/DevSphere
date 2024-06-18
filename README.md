@@ -1,79 +1,35 @@
-# Dev Sphere - A problem solving community
+# Dev Sphere - Q&A website for developers
 
-![demo](https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372466/pffcb0rwxtn6dao1xm83.jpg)
+<!-- [![Latest release](https://img.shields.io/github/v/release/shashwatw/dev-overflow?label=Latest%20release&style=social)](https://dev-sphere-pi.vercel.app/)
+[![GitHub commits](https://img.shields.io/github/commits-since/shashwatw/dev-overflow/v1.5.0.svg?style=social)](https://dev-sphere-pi.vercel.app/) -->
+
+[![Stars](https://img.shields.io/github/stars/shashwatw/dev-overflow?style=social)](https://dev-sphere-pi.vercel.app/)
+[![Fork](https://img.shields.io/github/forks/shashwatw/dev-overflow?style=social)](https://dev-sphere-pi.vercel.app/)
+
+![demo](https://cdn.discordapp.com/attachments/571883066017185802/1165414835811536976/Screenshot_2023-10-21_at_3.22.16_PM.png?ex=6546c425&is=65344f25&hm=21fd71517505f6b787fc611afd5c210c3d7436868af1975b656c00558fd288b3&)
+
+![contributions](https://img.shields.io/badge/all_contributors-1-orange.svg)
+![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
+[![website](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://dev-sphere-pi.vercel.app/)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 🌐 Demo
 
-Here is a working live demo: https://dev-sphere-pi.vercel.app/
+Here is a working live demo: [https://dev-sphere-pi.vercel.app/](https://dev-sphere-pi.vercel.app/)
 
 ## 📝 Description
 
-Welcome to my project! Here, I'll provide you with a brief overview of what inspired me to create it, why it solves a problem, and what I've learned throughout its development.
+Welcome to Dev Overflow, a dedicated question and answer platform for developers. Here's a brief overview of the project:
 
-- Motivation: I was motivated to build this project to address a specific issue and to enhance my coding skills.
-- Why I Built This Project: My main goal was to create a practical and user-friendly solution to a real-world problem.
-- Problem Solved: This project aims to simplify a particular task, making it more efficient and accessible.
-- What I Learned: Throughout the development process, I gained valuable insights into various technologies and programming concepts.
+- **Motivation**: The motivation behind this project was to create a dedicated platform where developers can ask questions and share knowledge. The aim was to foster a community that helps each other grow.
 
-## 📖 Table of Contents (Optional)
+- **Why I Built This Project**: The main goal was to provide a user-friendly platform where developers can find solutions to their coding problems, share their knowledge, and learn from others.
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+- **Problem Solved**: Dev Overflow addresses the need for a focused, community-driven platform for developers. It simplifies the process of finding reliable solutions to coding problems, making knowledge sharing more efficient and accessible.
 
-- [Installation](#installation)
-- [Usage](#usage)
+- **What I Learned**: Throughout the development process, I gained valuable insights into community building, full-stack web development, and the importance of clear communication in a technical environment.
 
-## 🛠️ Setup Project
-
-To get this project up and running in your development environment, follow these step-by-step instructions.
-
-### 🍴 Prerequisites
-
-We need to install or make sure that these tools are pre-installed on your machine:
-
-- [NodeJS](https://nodejs.org/en/download/): It is a JavaScript runtime build.
-
-- [Git](https://git-scm.com/downloads): It is an open source version control system.
-
-## ✨ Features
-
-If your project has a lot of features, list them here.
-
-### 🚀 Install Project
-
-1. Clone the Repository
-
-```bash
-git clone https://github.com/rakibtweets/dev_overflow_nextjs13.git
-```
-
-2. Install packages
-
-```
-npm install
-```
-
-3. create a `.env` file add necessary credencitals
-
-```bash
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
-NEXT_CLERK_WEBHOOK_SECRET=
-NEXT_PUBLIC_TINY_EDITOR_API_KEY=
-MONGODB_URL=
-NEXT_PUBLIC_SERVER_URL=
-OPENAI_API_KEY=
-NEXT_PUBLIC_RAPID_API_KEY=
-```
-
-4. Run the project using command below
-
-```bash
-npm run dev
-```
+- **Future Plans**: I plan to add more features to the platform, such as a job board, a blog, and a newsletter. I also plan to add a feature that allows users to save jobs to their favorites list.
 
 ### ⚒️ How to Contribute
 
@@ -85,49 +41,43 @@ To fix a bug or enhance an existing module, follow these steps:
 - Create a new branch (`git checkout -b improve-feature`)
 - Make the appropriate changes in the files
 - Add changes to reflect the changes made
-- Commit your changes (`git commit -am 'Improve feature'`)
+- Commit your changes (`git commit -m 'Improve feature'`)
 - Push to the branch (`git push origin improve-feature`)
 - Create a Pull Request
 
 ### 📩 Bug / Feature Request
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/username/projectname/issues/new) by including your search query and the expected result.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/TyeStanley/dev-overflow/issues/new) by including your search query and the expected result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/username/projectname/issues/new). Please include sample queries and their corresponding results.
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/TyeStanley/dev-overflow/issues/new). Please include sample queries and their corresponding results.
 
-## ✅ To-do
+### ✅ To-do
 
+- [x] Fix the AI question answering feature. Currently, doesn't work in production.
+- [ ] Implement a job board.
 - [ ] Enable users to save jobs to their favorites list.
-- [x] Allow users to apply to a job directly from the app.
-- [ ] Provide a simple and intuitive user interface for easy navigation.
+- [ ] Allow users to apply to a job directly from the app.
 - [ ] Allow users to filter jobs based on job title, location, or company.
+- [ ] Enable users to share jobs with their friends via email or social media.
+- [ ] Add a blog section.
+- [ ] Add a newsletter.
 
-## 📞 Contact Us
+### 🛠️ Built with
 
-[![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-rakibofficial007-blue?style=flat&logo=linkedin&logoColor=b0c0c0&labelColor=363D44)](https://www.linkedin.com/in/rakibofficial007/)
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [Next.js](https://nextjs.org/) - A React framework for building static and dynamic websites.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapidly building custom designs.
+- [MongoDB](https://www.mongodb.com/) - A document-oriented NoSQL database.
+- [Vercel](https://vercel.com/) - A cloud platform for static sites and Serverless Functions.
+- [Figma](https://www.figma.com/) - A collaborative interface design tool.
+- [VS Code](https://code.visualstudio.com/) - A code editor redefined and optimized for building and debugging modern web and cloud applications.
 
-## Project Page Screenshoots
+### 📞 Contact Me
 
-<details open>
-<summary>
- Feature pages
-</summary> <br />
+[![Follow us on LinkedIn](https://img.shields.io/badge/LinkedIn-TyeStanley-blue?style=flat&logo=linkedin&logoColor=b0c0c0&labelColor=363D44)](https://www.linkedin.com/in/shashwatw/)
+[![Follow us on twitter](https://img.shields.io/twitter/follow/tye_stanley.svg?style=social)](https://twitter.com/intent/follow?screen_name=swankhedekar)
+[![Follow us on Instagram](https://img.shields.io/badge/Instagram-tstanley090-grey?style=flat&logo=instagram&logoColor=b0c0c0&labelColor=8134af)](https://www.instagram.com/shashwatwankhedekar)
 
-<p align="center">
-    <img width="49%" src="https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372456/hodjutueb6oe0cywjhlf.jpg" alt="Home page"/>
-&nbsp;
-    <img width="49%" src="https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372454/s3q95g2pnfycwbzrfiij.jpg" alt="Global-search"/>
-</p>
+### 📜 License
 
-<p align="center">
-    <img width="49%" src="https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372455/mobv3d37yy7sdodibdrq.jpg" alt="All users"/>
-&nbsp;
-    <img width="49%" src="https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372464/ayw6yt2o7yvhmw5n9kiw.jpg" alt="Tags page"/>
-</p> 
-    
-<p align="center">
-    <img width="49%" src="https://res.cloudinary.com/dgur3iyy9/image/upload/v1699372463/o8qxhzajihbihiwdowe4.jpg" alt="profile"/>
-&nbsp;
-</p>
-    
-</details>
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
