@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { Input } from "@/components/ui/input";
-import { formUrlQuery, removeKeysFromQuery } from "@/lib/utils";
-import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import GlobalResult from "./GlobalResult";
+import { Input } from '@/components/ui/input';
+import { formUrlQuery, removeKeysFromQuery } from '@/lib/utils';
+import Image from 'next/image';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
+import GlobarResult from './GlobarResult';
 
 const GlobalSearch = () => {
   const router = useRouter();
@@ -13,9 +13,9 @@ const GlobalSearch = () => {
   const searchParams = useSearchParams();
   const searchContainerRef = useRef(null);
 
-  const query = searchParams.get("global");
+  const query = searchParams.get('global');
 
-  const [search, setSearch] = useState(query || "");
+  const [search, setSearch] = useState(query || '');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // close modal useEffect
@@ -27,15 +27,15 @@ const GlobalSearch = () => {
         !searchContainerRef.current.contains(e.target)
       ) {
         setIsModalOpen(false);
-        setSearch("");
+        setSearch('');
       }
     };
 
     setIsModalOpen(false);
 
-    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener('click', handleOutsideClick);
 
-    return () => document.removeEventListener("click", handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
   }, [pathname]);
 
   useEffect(() => {
@@ -43,15 +43,15 @@ const GlobalSearch = () => {
       if (search) {
         const newUrl = formUrlQuery({
           params: searchParams.toString(),
-          key: "global",
-          value: search,
+          key: 'global',
+          value: search
         });
         router.push(newUrl, { scroll: false });
       } else {
         if (query) {
           const newUrl = removeKeysFromQuery({
             params: searchParams.toString(),
-            keysToRemove: ["global", "type"],
+            keysToRemove: ['global', 'type']
           });
 
           router.push(newUrl, { scroll: false });
@@ -83,7 +83,7 @@ const GlobalSearch = () => {
             if (!isModalOpen) {
               setIsModalOpen(true);
             }
-            if (e.target.value === "" && isModalOpen) {
+            if (e.target.value === '' && isModalOpen) {
               setIsModalOpen(false);
             }
           }}
@@ -91,7 +91,7 @@ const GlobalSearch = () => {
           className="paragraph-regular text-dark400_light700 no-focus placeholder border-none bg-transparent shadow-none outline-none"
         />
       </div>
-      {isModalOpen && <GlobalResult />}
+      {isModalOpen && <GlobarResult />}
     </div>
   );
 };
