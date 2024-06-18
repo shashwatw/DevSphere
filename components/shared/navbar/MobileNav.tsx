@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetTrigger
-} from '@/components/ui/sheet';
-import Link from 'next/link';
-import Image from 'next/image';
-import { SignedOut } from '@clerk/nextjs';
-import { Button } from '@/components/ui/button';
-import { sidebarLinks } from '@/constants';
-import { usePathname } from 'next/navigation';
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import Link from "next/link";
+import Image from "next/image";
+import { SignedOut } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import { sidebarLinks } from "@/constants";
+import { usePathname } from "next/navigation";
 const NavContent = () => {
   const pathname = usePathname();
   return (
@@ -26,8 +26,8 @@ const NavContent = () => {
               href={link.route}
               className={` ${
                 isActive
-                  ? 'primary-gradient rounded-lg text-light-900 '
-                  : 'text-dark300_light900'
+                  ? "primary-gradient rounded-lg text-light-900 "
+                  : "text-dark300_light900"
               } flex items-center justify-start gap-4 bg-transparent p-4`}
             >
               <Image
@@ -35,9 +35,9 @@ const NavContent = () => {
                 alt={link.label}
                 height={20}
                 width={20}
-                className={`${isActive ? '' : 'invert-colors'}`}
+                className={`${isActive ? "" : "invert-colors"}`}
               />
-              <p className={`${isActive ? 'base-bold' : 'base-medium'}`}>
+              <p className={`${isActive ? "base-bold" : "base-medium"}`}>
                 {link.label}
               </p>
             </Link>
@@ -61,18 +61,18 @@ const MobileNav = () => {
         />
       </SheetTrigger>
       <SheetContent
-        side={'left'}
+        side={"left"}
         className="background-light900_dark200 border-none"
       >
         <Link href="/" className="flex items-center gap-1">
           <Image
-            src={'/assets/images/site-logo.svg'}
+            src={"/assets/images/site-logo.svg"}
             width={23}
             height={23}
-            alt="Devflow"
+            alt="DevSphere"
           />
           <p className="h2-bold  text-dark100_light900 font-spaceGrotesk ">
-            Dev <span className="text-primary-500">Overflow</span>
+            Dev <span className="text-primary-500">Sphere</span>
           </p>
         </Link>
 

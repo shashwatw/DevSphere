@@ -1,28 +1,28 @@
-import AnswersTab from '@/components/shared/AnswersTab/AnswersTab';
-import ProfileLink from '@/components/shared/ProfileLink/ProfileLink';
-import QuestionTab from '@/components/shared/QuestionTab/QuestionTab';
-import Stats from '@/components/shared/Stats/Stats';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import AnswersTab from "@/components/shared/AnswersTab/AnswersTab";
+import ProfileLink from "@/components/shared/ProfileLink/ProfileLink";
+import QuestionTab from "@/components/shared/QuestionTab/QuestionTab";
+import Stats from "@/components/shared/Stats/Stats";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { getUserInfo } from '@/lib/actions/user.action';
-import { getJoinedDate } from '@/lib/utils';
-import { URLProps } from '@/types';
-import { SignedIn, auth } from '@clerk/nextjs';
-import Image from 'next/image';
-import Link from 'next/link';
-import type { Metadata } from 'next';
+import { getUserInfo } from "@/lib/actions/user.action";
+import { getJoinedDate } from "@/lib/utils";
+import { URLProps } from "@/types";
+import { SignedIn, auth } from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Profile | Dev Overflow',
-  description: 'Profile page of Dev Overflow'
+  title: "Profile | Dev Sphere",
+  description: "Profile page of Dev Sphere",
 };
 
 const ProfileDetails = async ({ params, searchParams }: URLProps) => {
   const { userId: clerkId } = auth();
   const { user, totalQuestions, totalAnswers, badgeCounts, reputation } =
     await getUserInfo({
-      userId: params.id
+      userId: params.id,
     });
   return (
     <>

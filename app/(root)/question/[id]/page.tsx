@@ -1,21 +1,21 @@
-import Answer from '@/components/forms/Answer';
-import AllAnswers from '@/components/shared/AllAnswers/AllAnswers';
-import Metric from '@/components/shared/Metric/Metric';
-import ParseHTML from '@/components/shared/ParseHTML/ParseHTML';
-import RenderTag from '@/components/shared/RightSidebar/RenderTag';
-import { getQuestionById } from '@/lib/actions/question.action';
-import { getUserById } from '@/lib/actions/user.action';
-import { formatAndDivideNumber, getTimeStamp } from '@/lib/utils';
-import { auth } from '@clerk/nextjs';
-import Image from 'next/image';
-import Link from 'next/link';
-import Votes from '../../../../components/shared/Votes/Votes';
+import Answer from "@/components/forms/Answer";
+import AllAnswers from "@/components/shared/AllAnswers/AllAnswers";
+import Metric from "@/components/shared/Metric/Metric";
+import ParseHTML from "@/components/shared/ParseHTML/ParseHTML";
+import RenderTag from "@/components/shared/RightSidebar/RenderTag";
+import { getQuestionById } from "@/lib/actions/question.action";
+import { getUserById } from "@/lib/actions/user.action";
+import { formatAndDivideNumber, getTimeStamp } from "@/lib/utils";
+import { auth } from "@clerk/nextjs";
+import Image from "next/image";
+import Link from "next/link";
+import Votes from "../../../../components/shared/Votes/Votes";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Question details | Dev Overflow',
-  description: 'Question page of Dev Overflow'
+  title: "Question details | Dev Sphere",
+  description: "Question page of Dev Sphere",
 };
 
 // write interface here
@@ -28,7 +28,7 @@ interface QuestionDetailsProps {
 
 const QuestionDetails = async ({
   params,
-  searchParams
+  searchParams,
 }: QuestionDetailsProps) => {
   const { question } = await getQuestionById({ questionId: params.id });
 

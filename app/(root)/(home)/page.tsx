@@ -1,23 +1,23 @@
-import LocalSearchBar from '@/components/shared/search/LocalSearchBar';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { HomePageFilters } from '@/constants/filters';
-import Filter from '@/components/shared/Filter/Filter';
-import HomeFilters from '@/components/home/HomeFilters';
-import NoResult from '@/components/shared/NoResult/NoResult';
-import QuestionCard from '@/components/cards/QuestionCard';
+import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { HomePageFilters } from "@/constants/filters";
+import Filter from "@/components/shared/Filter/Filter";
+import HomeFilters from "@/components/home/HomeFilters";
+import NoResult from "@/components/shared/NoResult/NoResult";
+import QuestionCard from "@/components/cards/QuestionCard";
 import {
   getQuestions,
-  getRecommendedQuestions
-} from '@/lib/actions/question.action';
-import { SearchParamsProps } from '@/types';
-import Pagination from '@/components/shared/Pagination/Pagination';
-import type { Metadata } from 'next';
-import { auth } from '@clerk/nextjs';
+  getRecommendedQuestions,
+} from "@/lib/actions/question.action";
+import { SearchParamsProps } from "@/types";
+import Pagination from "@/components/shared/Pagination/Pagination";
+import type { Metadata } from "next";
+import { auth } from "@clerk/nextjs";
 
 export const metadata: Metadata = {
-  title: 'Home | Dev Overflow',
-  description: 'Home page of Dev Overflow'
+  title: "Home | Dev Sphere",
+  description: "Home page of Dev Sphere",
 };
 
 export default async function Home({ searchParams }: SearchParamsProps) {
@@ -26,24 +26,24 @@ export default async function Home({ searchParams }: SearchParamsProps) {
 
   // ? fetch recomended questions
 
-  if (searchParams?.filter === 'recommended') {
+  if (searchParams?.filter === "recommended") {
     if (userId) {
       result = await getRecommendedQuestions({
         userId,
         searchQuery: searchParams?.q,
-        page: searchParams?.page ? +searchParams?.page : 1
+        page: searchParams?.page ? +searchParams?.page : 1,
       });
     } else {
       result = {
         questions: [],
-        isNext: false
+        isNext: false,
       };
     }
   } else {
     result = await getQuestions({
       searchQuery: searchParams?.q,
       filter: searchParams?.filter,
-      page: searchParams?.page ? +searchParams?.page : 1
+      page: searchParams?.page ? +searchParams?.page : 1,
     });
   }
 
@@ -53,7 +53,7 @@ export default async function Home({ searchParams }: SearchParamsProps) {
     <>
       <div className="flex w-full flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
         <h1 className="h1-bold text-dark100_light900">All Questions</h1>
-        <Link href={'/ask-question'} className="flex justify-end max-sm:w-full">
+        <Link href={"/ask-question"} className="flex justify-end max-sm:w-full">
           <Button className="primary-gradient min-h-[40px] rounded-lg px-4 py-3 !text-light-900">
             Ask a Question
           </Button>

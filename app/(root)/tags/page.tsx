@@ -1,24 +1,24 @@
-import Filter from '@/components/shared/Filter/Filter';
-import NoResult from '@/components/shared/NoResult/NoResult';
-import Pagination from '@/components/shared/Pagination/Pagination';
-import LocalSearchBar from '@/components/shared/search/LocalSearchBar';
-import { TagFilters } from '@/constants/filters';
-import { getAllTags } from '@/lib/actions/tag.action';
-import { SearchParamsProps } from '@/types';
-import Link from 'next/link';
+import Filter from "@/components/shared/Filter/Filter";
+import NoResult from "@/components/shared/NoResult/NoResult";
+import Pagination from "@/components/shared/Pagination/Pagination";
+import LocalSearchBar from "@/components/shared/search/LocalSearchBar";
+import { TagFilters } from "@/constants/filters";
+import { getAllTags } from "@/lib/actions/tag.action";
+import { SearchParamsProps } from "@/types";
+import Link from "next/link";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Tags | Dev Overflow',
-  description: 'Quesiton tags page of Dev Overflow'
+  title: "Tags | Dev Sphere",
+  description: "Quesiton tags page of Dev Sphere",
 };
 
 const Tags = async ({ searchParams }: SearchParamsProps) => {
   const { tags, isNext } = await getAllTags({
     searchQuery: searchParams?.q,
     filter: searchParams?.filter,
-    page: searchParams?.page ? +searchParams.page : 1
+    page: searchParams?.page ? +searchParams.page : 1,
   });
 
   const pageNumber = searchParams?.page ? +searchParams?.page : 1;
@@ -58,7 +58,7 @@ const Tags = async ({ searchParams }: SearchParamsProps) => {
                 <p className="small-medium text-dark400_light500 mt-3.5">
                   <span className="body-semibold primary-text-gradient mr-2.5">
                     {tag.questions.length}+
-                  </span>{' '}
+                  </span>{" "}
                   Questions
                 </p>
               </article>

@@ -1,14 +1,14 @@
-import Question from '@/components/forms/Question';
-import { getQuestionById } from '@/lib/actions/question.action';
-import { getUserById } from '@/lib/actions/user.action';
-import { ParamsProps } from '@/types';
-import { auth } from '@clerk/nextjs';
+import Question from "@/components/forms/Question";
+import { getQuestionById } from "@/lib/actions/question.action";
+import { getUserById } from "@/lib/actions/user.action";
+import { ParamsProps } from "@/types";
+import { auth } from "@clerk/nextjs";
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Edit Question | Dev Overflow',
-  description: 'Edit quesiton page of Dev Overflow'
+  title: "Edit Question | Dev Sphere",
+  description: "Edit quesiton page of Dev Sphere",
 };
 
 const EditQuestion = async ({ params }: ParamsProps) => {
@@ -18,7 +18,7 @@ const EditQuestion = async ({ params }: ParamsProps) => {
   const mongoUser = await getUserById({ userId });
 
   const { question } = await getQuestionById({
-    questionId: params.id
+    questionId: params.id,
   });
 
   return (
