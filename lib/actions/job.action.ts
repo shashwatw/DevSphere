@@ -1,5 +1,10 @@
 "use server";
 import { JobFilterParams } from "./shared.types";
+interface Country {
+  name: {
+    common: string;
+  };
+}
 
 export const fetchCountries = async () => {
   try {
@@ -7,7 +12,7 @@ export const fetchCountries = async () => {
     const result = await response.json();
 
     // Sort countries alphabetically by name
-    result.sort((a, b) => {
+    result.sort((a: Country, b: Country) => {
       const nameA = a.name.common.toUpperCase();
       const nameB = b.name.common.toUpperCase();
       if (nameA < nameB) {
