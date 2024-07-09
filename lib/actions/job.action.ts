@@ -1,10 +1,24 @@
-'use server';
-import { JobFilterParams } from './shared.types';
+"use server";
+import { JobFilterParams } from "./shared.types";
 
 export const fetchCountries = async () => {
   try {
-    const response = await fetch('https://restcountries.com/v3.1/all');
+    const response = await fetch("https://restcountries.com/v3.1/all");
     const result = await response.json();
+
+    // Sort countries alphabetically by name
+    result.sort((a, b) => {
+      const nameA = a.name.common.toUpperCase();
+      const nameB = b.name.common.toUpperCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+
     return result;
   } catch (error) {
     console.log(error);
@@ -12,21 +26,23 @@ export const fetchCountries = async () => {
 };
 
 export const fetchLocation = async () => {
-  const response = await fetch('http://ip-api.com/json/?fields=country');
+  const response = await fetch("http://ip-api.com/json/?fields=country");
   const location = await response.json();
   return location.country;
 };
 
 export const fetchJobs = async (filters: JobFilterParams) => {
   const { page, query } = filters;
-  console.log('fetchJobs  query:', query);
+  console.log("fetchJobs  query:", query);
 
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      'X-RapidAPI-Key': process.env.NEXT_PUBLIC_RAPID_API_KEY ?? '',
-      'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
-    }
+      "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
+      // ??
+      // "2402d23c54msh144d415e850575dp13b690jsn31d9e1affe9e"
+      "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+    },
   };
   const url = `https://jsearch.p.rapidapi.com/search?query=${query}&page=${page}`;
 
